@@ -1,0 +1,18 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "menu"
+    label: "Меню"
+    folder: "src/menu"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Назва", name: "name", widget: "string" }
+      - { label: "Опис", name: "description", widget: "text" }
+      - { label: "Ціна", name: "price", widget: "number" }
+      - { label: "Фото", name: "image", widget: "image", required: false }
